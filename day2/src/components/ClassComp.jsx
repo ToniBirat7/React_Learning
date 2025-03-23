@@ -4,7 +4,7 @@ class Welcome extends Component {
     render() {
         return (
             <div className="classComp">
-                <h1>This is Class Component</h1>
+                <h1>Hi, it's me {this.props.name} Welcome</h1>
             </div>
         )
     }

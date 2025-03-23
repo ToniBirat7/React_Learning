@@ -4,7 +4,7 @@ const ChildProps = (props) => {
     console.log(props)
     return (
         <>
-            <h1> Hi, this is {props.children} </h1>
+            {props.children}
         </>
     )
 }
