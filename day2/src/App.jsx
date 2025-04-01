@@ -1,7 +1,7 @@
-import Greet from './components/FuncComp'
-import Welcome from './components/ClassComp'
-import ChildProps from './components/ChildProps'
-import Message from './components/ClassState'
+import Greet from './components/FunctionalComp/FuncComp'
+import Welcome from './components/ClassComp/ClassComp'
+import ChildProps from './components/ChildProps/ChildProps'
+import Message from './components/ClassComp/ClassState'
 
 import './App.css'
 
