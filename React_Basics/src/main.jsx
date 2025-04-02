@@ -17,31 +17,31 @@ import Memo from './components/ReactMemo/Memo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <App /> */}
+  {/* <App /> */}
 
-    {/* <CounterBtn /> */}
-    
-    {/* <DestructringPropsandState name="Birat" heroName="Hanuman"></DestructringPropsandState> */}
+  {/* <CounterBtn /> */}
+  
+  {/* <DestructringPropsandState name="Birat" heroName="Hanuman"></DestructringPropsandState> */}
 
-    {/* <FunctionClick></FunctionClick> */}
+  {/* <FunctionClick></FunctionClick> */}
 
-    {/* <ClassClick></ClassClick> */}
+  {/* <ClassClick></ClassClick> */}
 
-    {/* <EventBind></EventBind> */}
+  {/* <EventBind></EventBind> */}
 
-    {/* <Parent></Parent> */}
+  {/* <Parent></Parent> */}
 
-    {/* <UserGreeting></UserGreeting> */}
+  {/* <UserGreeting></UserGreeting> */}
 
-    {/* <ListRendering></ListRendering> */}
+  {/* <ListRendering></ListRendering> */}
 
-    {/* <InLine></InLine> */}
+  {/* <InLine></InLine> */}
 
-    {/* <CSSModule></CSSModule> */}
+  {/* <CSSModule></CSSModule> */}
 
-    {/* <Form></Form> */}
+  {/* <Form></Form> */}
 
-    <Memo name="Implementation of Memo"></Memo>
+  <Memo name="Implementation of Memo"></Memo>
 
   </StrictMode>,
 )
