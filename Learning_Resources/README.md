@@ -17,3 +17,5 @@
 [React_Playlist_Best_Detailed](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
 
 [Best_Channel_For_Frontend](https://www.youtube.com/@Codevolution/playlists)
+
+[NetCad_CSS_Course](https://www.netacad.com/courses/css-essentials?courseLang=en-US)

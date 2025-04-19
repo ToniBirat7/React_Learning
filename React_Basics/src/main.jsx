@@ -14,6 +14,7 @@ import InLine from './components/StylingTypes/InLine.jsx'
 import CSSModule from './components/StylingTypes/cssModule.jsx'
 import Form from './components/ControlledComponent/Form.jsx'
 import Memo from './components/ReactMemo/Memo.jsx'
+import RefDemo from './components/Refs/RefDemo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -41,7 +42,9 @@ createRoot(document.getElementById('root')).render(
 
   {/* <Form></Form> */}
 
-  <Memo name="Implementation of Memo"></Memo>
+  {/* <Memo name="Implementation of Memo"></Memo> */}
+
+  <RefDemo></RefDemo>
 
   </StrictMode>,
 )
