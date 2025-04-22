@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  border: solid black 2px;
+  min-height: 800px;
+  /* flex-wrap: wrap; */
+  /* justify-content: center;
+  align-items: center;
+  align-content: center; */
+  gap: 10px;
+}
+
+.box{
+  height: 200px;
+  width: 200px;
+  min-width: 100px;
+  background-color: #0071FF;
+  font-size: 40pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+  /* flex-grow: 1; */
+}
+
+@media(max-width: 575px) {
+  .container{
+    flex-wrap: wrap;
+  }
+  
+}
