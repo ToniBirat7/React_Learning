@@ -4,11 +4,15 @@ import App from "./App.jsx";
 import "./index.css";
 import Flexbox from "./components/Flexbox.jsx";
 import Tailwind from "./components/Tailwind.jsx";
+import Grid from "./components/Grid.jsx";
+import MediaQuery from "./components/MediaQuery.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
-    <Flexbox></Flexbox>
+    {/* <Flexbox></Flexbox> */}
     {/* <Tailwind></Tailwind> */}
+    {/* <Grid></Grid> */}
+    <MediaQuery></MediaQuery>
   </StrictMode>
 );
