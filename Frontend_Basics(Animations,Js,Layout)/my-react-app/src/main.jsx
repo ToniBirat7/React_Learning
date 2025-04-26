@@ -6,6 +6,7 @@ import Flexbox from "./components/Flexbox.jsx";
 import Tailwind from "./components/Tailwind.jsx";
 import Grid from "./components/Grid.jsx";
 import MediaQuery from "./components/MediaQuery.jsx";
+import CustomeStyling from "./components/CustomeStyling.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")).render(
     {/* <Flexbox></Flexbox> */}
     {/* <Tailwind></Tailwind> */}
     {/* <Grid></Grid> */}
-    <MediaQuery></MediaQuery>
+    {/* <MediaQuery></MediaQuery> */}
+    <CustomeStyling></CustomeStyling>
   </StrictMode>
 );
