@@ -9,6 +9,7 @@ import MediaQuery from "./components/MediaQuery.jsx";
 import CustomeStyling from "./components/CustomeStyling.jsx";
 import AvoidLengthyTailwindCSS from "./components/AvoidLengthyTailwindCSS.jsx";
 import { SwitchDemo } from "./components/Shadcnui.jsx";
+import OverrideDefaultAccent from "./components/OverrideDefaultAccent.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById("root")).render(
     {/* <MediaQuery></MediaQuery> */}
     {/* <CustomeStyling></CustomeStyling> */}
     {/* <AvoidLengthyTailwindCSS></AvoidLengthyTailwindCSS> */}
-    <SwitchDemo></SwitchDemo>
+    {/* <SwitchDemo></SwitchDemo> */}
+    <OverrideDefaultAccent></OverrideDefaultAccent>
   </StrictMode>
 );

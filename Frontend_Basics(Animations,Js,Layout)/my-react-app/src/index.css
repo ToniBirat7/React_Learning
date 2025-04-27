@@ -3,9 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* body {
+body {
   background-color: #10172a;
-} */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
 
 @theme {
   --color-chestnut: "#973F29";

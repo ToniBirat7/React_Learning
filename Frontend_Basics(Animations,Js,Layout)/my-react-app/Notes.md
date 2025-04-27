@@ -20,3 +20,9 @@ This approach works well until you need to customize a component to fit your des
 We will need to create a `jsconfig.json` file for path navigation.
 
 After installation, the index.css will change as `shadcn` wil add it's base theme variales and utilities.
+
+## **TailwindCSS Tips and Tricks**
+
+### **Accent Color**
+
+Our browser provides default accent colors for the tags that are used in the HTML by default. But we can modify those with CSS Classes.
