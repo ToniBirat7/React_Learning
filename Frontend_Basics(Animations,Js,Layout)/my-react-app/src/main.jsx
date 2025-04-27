@@ -7,6 +7,8 @@ import Tailwind from "./components/Tailwind.jsx";
 import Grid from "./components/Grid.jsx";
 import MediaQuery from "./components/MediaQuery.jsx";
 import CustomeStyling from "./components/CustomeStyling.jsx";
+import AvoidLengthyTailwindCSS from "./components/AvoidLengthyTailwindCSS.jsx";
+import { SwitchDemo } from "./components/Shadcnui.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,6 +17,8 @@ createRoot(document.getElementById("root")).render(
     {/* <Tailwind></Tailwind> */}
     {/* <Grid></Grid> */}
     {/* <MediaQuery></MediaQuery> */}
-    <CustomeStyling></CustomeStyling>
+    {/* <CustomeStyling></CustomeStyling> */}
+    {/* <AvoidLengthyTailwindCSS></AvoidLengthyTailwindCSS> */}
+    <SwitchDemo></SwitchDemo>
   </StrictMode>
 );
