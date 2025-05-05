@@ -1,29 +1,21 @@
-import Greet from './components/FunctionalComp/FuncComp'
-import Welcome from './components/ClassComp/ClassComp'
-import ChildProps from './components/ChildProps/ChildProps'
-import Message from './components/ClassComp/ClassState'
-
-import './App.css'
+import HomePage from "./components/Routing/HomePage";
+import Dashboard from "./components/Routing/Dashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NotFound from "./components/Routing/NotFound";
+import Nav from "./components/Routing/Nav";
+import "./App.css";
 
 function App() {
-
   return (
-    <>
-      <div>
-
-        <Greet name="Birat" commonGreet="Namaste"/>
-
-        <Welcome name="Class Prop"/>
-
-        <ChildProps name="Suman" commonGreet="Namaste">
-          <p>I was called as Child Props</p>
-        </ChildProps>
-
-        <Message />
-        
-      </div>
-    </>
-  )
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

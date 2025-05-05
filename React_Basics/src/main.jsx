@@ -1,50 +1,49 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import CounterBtn from './components/ClassComp/CounterClassComp.jsx'
-import DestructringPropsandState from './components/FunctionalComp/DestructringPropsandState.jsx'
-import FunctionClick from './components/FunctionalComp/FunctionClick.jsx'
-import ClassClick from './components/ClickClass/ClassClick.jsx'
-import EventBind from './components/ClassComp/EventBind.jsx'
-import Parent from './components/CallBackProps/Parent.jsx'
-import UserGreeting from './components/ConditionalRendering/UserGreeting.jsx'
-import ListRendering from './components/ListRendering/ListRendering.jsx'
-import InLine from './components/StylingTypes/InLine.jsx'
-import CSSModule from './components/StylingTypes/cssModule.jsx'
-import Form from './components/ControlledComponent/Form.jsx'
-import Memo from './components/ReactMemo/Memo.jsx'
-import RefDemo from './components/Refs/RefDemo.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.jsx";
+import CounterBtn from "./components/ClassComp/CounterClassComp.jsx";
+import DestructringPropsandState from "./components/FunctionalComp/DestructringPropsandState.jsx";
+import FunctionClick from "./components/FunctionalComp/FunctionClick.jsx";
+import ClassClick from "./components/ClickClass/ClassClick.jsx";
+import EventBind from "./components/ClassComp/EventBind.jsx";
+import Parent from "./components/CallBackProps/Parent.jsx";
+import UserGreeting from "./components/ConditionalRendering/UserGreeting.jsx";
+import ListRendering from "./components/ListRendering/ListRendering.jsx";
+import InLine from "./components/StylingTypes/InLine.jsx";
+import CSSModule from "./components/StylingTypes/cssModule.jsx";
+import Form from "./components/ControlledComponent/Form.jsx";
+import Memo from "./components/ReactMemo/Memo.jsx";
+import RefDemo from "./components/Refs/RefDemo.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-  {/* <App /> */}
+    <App />
 
-  {/* <CounterBtn /> */}
-  
-  {/* <DestructringPropsandState name="Birat" heroName="Hanuman"></DestructringPropsandState> */}
+    {/* <CounterBtn /> */}
 
-  {/* <FunctionClick></FunctionClick> */}
+    {/* <DestructringPropsandState name="Birat" heroName="Hanuman"></DestructringPropsandState> */}
 
-  {/* <ClassClick></ClassClick> */}
+    {/* <FunctionClick></FunctionClick> */}
 
-  {/* <EventBind></EventBind> */}
+    {/* <ClassClick></ClassClick> */}
 
-  {/* <Parent></Parent> */}
+    {/* <EventBind></EventBind> */}
 
-  {/* <UserGreeting></UserGreeting> */}
+    {/* <Parent></Parent> */}
 
-  {/* <ListRendering></ListRendering> */}
+    {/* <UserGreeting></UserGreeting> */}
 
-  {/* <InLine></InLine> */}
+    {/* <ListRendering></ListRendering> */}
 
-  {/* <CSSModule></CSSModule> */}
+    {/* <InLine></InLine> */}
 
-  {/* <Form></Form> */}
+    {/* <CSSModule></CSSModule> */}
 
-  {/* <Memo name="Implementation of Memo"></Memo> */}
+    {/* <Form></Form> */}
 
-  <RefDemo></RefDemo>
+    {/* <Memo name="Implementation of Memo"></Memo> */}
 
-  </StrictMode>,
-)
+    {/* <RefDemo></RefDemo> */}
+  </StrictMode>
+);
