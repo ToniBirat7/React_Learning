@@ -1,4 +1,4 @@
-import { type Metadata } from 'next';
+import { type Metadata } from "next";
 
 type Props = {
   params: {
@@ -7,16 +7,13 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  return {
-    title: `Review ${params.reviewId} for Product ${params.productId}`,
-  };
-}
-
 export default async function Review({ params }: Props) {
+  const { productId, reviewId } = await Promise.resolve(params);
   return (
     <div>
-      <h1>Review {params.reviewId} for Product {params.productId}</h1>
+      <h1>
+        Review {reviewId} for Product {productId}
+      </h1>
       <p>Product review will be displayed hereeeeeeeeeeeee.</p>
     </div>
   );
