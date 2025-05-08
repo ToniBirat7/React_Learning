@@ -10,13 +10,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
+      <header
+        style={{
+          backgroundColor: "red",
+          padding: "1rem",
+        }}
+      >
+        <p>This is header</p>
+      </header>
       <body>{children}</body>
+      <footer
+        style={{
+          backgroundColor: "lightblue",
+          padding: "1rem",
+        }}
+      >
+        <p>Footer</p>
+      </footer>
     </html>
   );
 }

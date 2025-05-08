@@ -1,4 +1,5 @@
 import { type Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -9,6 +10,9 @@ type Props = {
 
 export default async function Review({ params }: Props) {
   const { productId, reviewId } = await Promise.resolve(params);
+  if (parseInt(reviewId) > 1000) {
+    notFound();
+  }
   return (
     <div>
       <h1>
