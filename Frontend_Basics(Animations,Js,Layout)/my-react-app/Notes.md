@@ -1,5 +1,6 @@
 ## **Resources**
 
+[Advanced_HTML_CSSS](https://www.youtube.com/watch?v=XhqEuyWjbdo)
 [JavaScript_Mastery](https://www.youtube.com/watch?v=6biMWgD6_JY)
 [Net_Ninja_Playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw)
 [Learn_CSS_Animations_Component_Animations](https://www.youtube.com/@coding2go/playlists)
