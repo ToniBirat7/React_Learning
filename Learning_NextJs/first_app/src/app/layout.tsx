@@ -1,5 +1,11 @@
-export const metadata = {
-  title: "My First App",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "",
+    default: "Next.Js Tut - Birat Gautam",
+    template: "%s | Birat Gautam",
+  },
   description: "This is my first app using Next.js 13.4",
 };
 
@@ -26,7 +32,7 @@ export default function RootLayout({
         }}
       >
         <p>Footer</p>
-      </footer>
+      </footer>     
     </html>
   );
 }
