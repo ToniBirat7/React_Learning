@@ -30,3 +30,8 @@
 [Net_Ninja_Playlist](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw)
 [Learn_CSS_Animations_Component_Animations](https://www.youtube.com/@coding2go/playlists)
 [CSS_Snippets](https://www.youtube.com/@CSSnippets/videos)
+
+## **Improving Web Preformance**
+
+[LinkedIn_Learning](https://www.linkedin.com/learning/developing-for-web-performance/what-is-performance-and-why-is-it-so-important?resume=false&u=42288921)
+
