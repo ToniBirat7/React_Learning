@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Card from "../src/components/Card";
 
 const App = () => {
   const [number, setHasLiked] = useState(0);
@@ -6,7 +7,7 @@ const App = () => {
   return (
     <>
       <div className="">
-        <Card></Card>
+        <Card props={"Birat"} />
       </div>
     </>
   );

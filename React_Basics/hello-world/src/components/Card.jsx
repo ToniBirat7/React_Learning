@@ -1,9 +1,10 @@
 import React from "react";
 
-const Card = (props) => {
+const Card = ({ props }) => {
+  console.log("Props", props);
   return (
     <>
-      <h1>This is Card {props.msg}</h1>
+      <h1>This is Card {props}</h1>
     </>
   );
 };
