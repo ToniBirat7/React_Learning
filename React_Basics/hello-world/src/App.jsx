@@ -1,10 +1,13 @@
 import { useState } from "react";
 
-const App = ({ props }) => {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const [number, setHasLiked] = useState(0);
+
   return (
     <>
-      <h2>Functional Component</h2>
+      <div className="">
+        <Card></Card>
+      </div>
     </>
   );
 };
