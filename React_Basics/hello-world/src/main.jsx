@@ -3,7 +3,9 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 
-console.log(<App props={"Hiii"} />);
+console.log(App({ props: "Hi" }));
+
+console.log(<App props={"Hi"} />);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

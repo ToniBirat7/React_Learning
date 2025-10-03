@@ -1,4 +1,4 @@
-const App = ({ props }) => {
+const App = (props) => {
   return (
     <>
       <h2>Functional Component</h2>
