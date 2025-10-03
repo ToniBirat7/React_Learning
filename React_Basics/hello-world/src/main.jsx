@@ -7,6 +7,8 @@ console.log(App({ props: "Hi" }));
 
 console.log(<App props={"Hi"} />);
 
+console.log("Hi");
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
