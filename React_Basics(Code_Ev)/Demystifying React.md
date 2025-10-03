@@ -1,8 +1,9 @@
- # How React Actually Works?
+# How React Actually Works?
+
 - React is a JavaScript library that is used to build user interfaces. It is not a framework. It is not a complete solution and you will often need to use more libraries with it to form a complete solution.
 - React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 
-To understand how React works, I have divided the whole process into two parts: 
+To understand how React works, I have divided the whole process into two parts:
 
 ## **Part One**
 
@@ -14,42 +15,42 @@ We need to know that Browser can only understand `HTML`, `CSS` and `JavaScript`.
 
 Suppose we have a simple `HTML` file that contains a `div` element with an `id` of `root`. We want to render a `h1` with its inner text `Hello, React!` element inside this `div` element using `React`.
 
-  ```HTML
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <script
-            src="https://unpkg.com/react@17/umd/react.development.js"
-            crossorigin
-  >  </script>
-    <script
-            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
-            crossorigin
-  >  </script>
-    <title>React ⚛️</title>
-  </head>
-  <body>
-  <div id="root"></div>
-  <script>
-    ReactDOM.render(
-            React.createElement(
-                    'h1',
-                    null,
-                    'Hello, React!'
-            ),
-            document.getElementById('root')
-    );
-  </script>
-  </body>
-  </html>
-  ```
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script
+          src="https://unpkg.com/react@17/umd/react.development.js"
+          crossorigin
+>  </script>
+  <script
+          src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+          crossorigin
+>  </script>
+  <title>React ⚛️</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+  ReactDOM.render(
+          React.createElement(
+                  'h1',
+                  null,
+                  'Hello, React!'
+          ),
+          document.getElementById('root')
+  );
+</script>
+</body>
+</html>
+```
 
 If we open this `HTML` file in the browser, we will see the `h1` element with the text `Hello, React!` rendered inside the `div` element with the `id` of `root`.
 
-It is because we are using `React.createElement()` method to create a `h1` element ,and then we are rendering it inside the `div` element with the `id` of `root` using `ReactDOM.render()` method. 
+It is because we are using `React.createElement()` method to create a `h1` element ,and then we are rendering it inside the `div` element with the `id` of `root` using `ReactDOM.render()` method.
 
-Here, we need to understand that `React.createElement()` method is a plain JavaScript function. This function is made available through JavaScript library as we're loading  the library in the `head` section of the `HTML` file. One more thing to note here is that both `React` and `ReactDOM` are global objects that are available in the browser. 
+Here, we need to understand that `React.createElement()` method is a plain JavaScript function. This function is made available through JavaScript library as we're loading the library in the `head` section of the `HTML` file. One more thing to note here is that both `React` and `ReactDOM` are global objects that are available in the browser.
 
 **But how are these global objects available in the browser?**
 
@@ -59,13 +60,13 @@ To understand the above sentence we've to understand how browser works while exe
 
 **What happens when the browser loads the HTML file?**
 
-When the browser loads the `HTML` file, it starts parsing the `HTML` file from top to bottom. 
+When the browser loads the `HTML` file, it starts parsing the `HTML` file from top to bottom.
 
 As soon as it encounters a `script` tag it does the following things:
 
-- The browser makes an `HTTP request` to download the resource specified in the `src` attribute of the `script` tag. In this case, first the browser makes an HTTP request to download the `React` library i.e. [`https://unpkg.com/react@17/umd/react.development.js`]()  and then it makes another `HTTP request` to download the `ReactDOM` library i.e. [`https://unpkg.com/react-dom@17/umd/react-dom.development.js`]().
+- The browser makes an `HTTP request` to download the resource specified in the `src` attribute of the `script` tag. In this case, first the browser makes an HTTP request to download the `React` library i.e. [`https://unpkg.com/react@17/umd/react.development.js`]() and then it makes another `HTTP request` to download the `ReactDOM` library i.e. [`https://unpkg.com/react-dom@17/umd/react-dom.development.js`]().
 
-- The browser blocks the further rendering of the `HTML` file until the library or script is fully downloaded. 
+- The browser blocks the further rendering of the `HTML` file until the library or script is fully downloaded.
 
 - Once the library or script is downloaded, the browser immediately executes the library or script. The code in these scripts defines global objects like `React` and `ReactDOM` that are made available in the browser for further use.
 
@@ -75,18 +76,15 @@ As soon as it encounters a `script` tag it does the following things:
 
 - The `React` library contains the `React` object that includes functionality to create Components using `useState`, `useEffect`, etc and create elements using `React.createElement()` method.
 
-
 - The `ReactDOM` library contains the `ReactDOM` object that includes functionality to render the Components created using the `React` library.
 
-
 - This means that the browser will not render the `HTML` file further until the `React` library is downloaded and executed. Similarly, the browser will not render the `HTML` file further until the `ReactDOM` library is downloaded and executed.
- 
 
 **ReactDOM Library**:
 
 - The `ReactDOM` library contains the `ReactDOM` object that includes functionality for connecting React components to the DOM. It includes the `ReactDOM.render()` method that is used to render React components to the DOM.
 
-Till now, we have understood how the browser loads the `React` and `ReactDOM` libraries. 
+Till now, we have understood how the browser loads the `React` and `ReactDOM` libraries.
 
 **How Are They Accessible in the Browser?**
 
@@ -103,16 +101,15 @@ One thing to note is that both the `React` and `ReactDOM` are enclosed within an
 
 **But We Have A Problem Here**
 
-If the browser downloads the `React` and `ReactDOM` libraries every time the `HTML` file is loaded, it will slow down the loading of the page. This is because the browser has to make an `HTTP request` to download the libraries every time the `HTML` file is loaded. 
+If the browser downloads the `React` and `ReactDOM` libraries every time the `HTML` file is loaded, it will slow down the loading of the page. This is because the browser has to make an `HTTP request` to download the libraries every time the `HTML` file is loaded.
 
 To solve this problem, we can use a `bundler` like `Webpack` or `Vite` to bundle the `React` and `ReactDOM` libraries with our JavaScript code. This way, the browser will download the bundled JavaScript file that contains the `React` and `ReactDOM` libraries along with our JavaScript code. This will reduce the number of `HTTP requests` made by the browser and speed up the loading of the page.
 
-But, if `bundler` is not used, then in such cases Modern browsers can cache the libraries and scripts that are downloaded.  This means that the browser will not download the libraries and scripts again if they are already cached. This will speed up the loading of the page.
+But, if `bundler` is not used, then in such cases Modern browsers can cache the libraries and scripts that are downloaded. This means that the browser will not download the libraries and scripts again if they are already cached. This will speed up the loading of the page.
 
 ## **Part Two**
 
 I hope you have understood how the browser loads the `React` and `ReactDOM` libraries and how they are made available in the browser when we are not using `JSX`.
-
 
 Here, we've to note one thing that we've not used JSX in the above code. We've used `React.createElement()` method to create the `h1` element. Due to this, we've not used any `transpiler` like `Babel` to convert the `JSX` into `JavaScript` that browser can understand.
 
@@ -157,32 +154,33 @@ Before, we proceed further let's understand what is `JSX`?
 
 `JSX` (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. It looks similar to XML or HTML. `JSX` is not a separate language, but a syntax extension for JavaScript. It is used with `React` to describe what the UI should look like.
 
-At its core, `JSX` is just syntactic sugar for `React.createElement()` method. 
+At its core, `JSX` is just syntactic sugar for `React.createElement()` method.
 
-When you write `JSX` code, it is converted into `React.createElement()` method calls by a `transpiler` like `Babel`. This is because browsers don’t understand `JSX`. 
+When you write `JSX` code, it is converted into `React.createElement()` method calls by a `transpiler` like `Babel`. This is because browsers don’t understand `JSX`.
 
 In the above code, we are using `JSX` to create the `h1` element. The `JSX` used in our code is shown below:
 
 ```javascript
 const App = () => {
-    return <h1>Hello, React!</h1>;
+  return <h1>Hello, React!</h1>;
 };
 ```
 
 ### **Features of JSX**
 
 - **Embedding Expressions**: You can embed JavaScript expressions inside `JSX` using curly braces `{}`.
- 
-**Example :** 
+
+**Example :**
 
 ```html
-const name = "React";
-const element = <h1>Hello, {name}!</h1>;
+const name = "React"; const element =
+<h1>Hello, {name}!</h1>
+;
 ```
 
 - **Attributes**: You can pass attributes to `JSX` elements just like you do in HTML.
 
-**Example :** 
+**Example :**
 
 ```html
 const element = <img src="image.png" alt="An image" className="img-class" />;
@@ -190,15 +188,12 @@ const element = <img src="image.png" alt="An image" className="img-class" />;
 
 - **Inline Style** : You can use inline styles in `JSX` using an object.
 
-**Example :** 
+**Example :**
 
 ```html
-const style = {
-color: "blue",
-fontSize: "20px",
-};
-
-const element = <h1 style={style}>Styled Text</h1>;
+const style = { color: "blue", fontSize: "20px", }; const element =
+<h1 style="{style}">Styled Text</h1>
+;
 ```
 
 If we open this `HTML` file in the browser, we will not see the `h1` element with the text `Hello, React!` inside the `div` element with the `id` of `root`. This is because the browser does not understand `JSX`.
@@ -209,11 +204,7 @@ To solve this problem, we need to use a `transpiler` like `Babel` to convert the
 
 ```javascript
 const App = () => {
-    return React.createElement(
-        'h1',
-        null,
-        'Hello, React!'
-    );
+  return React.createElement("h1", null, "Hello, React!");
 };
 ```
 
@@ -231,22 +222,17 @@ When we talk about `transpilers` in the context of `React` and `JSX`, we are ref
 
 1. **Input Code** : Developer writes the code in a `.jsx` file that contains `JSX` syntax.
 
-
-2. **Parsing* : Babel parses the input code and generates an Abstract Syntax Tree (AST) representation of the code. The `AST` is a structured representation of the code that helps the transpiler to work with the code in a more structured way. 
-
+2. \*_Parsing_ : Babel parses the input code and generates an Abstract Syntax Tree (AST) representation of the code. The `AST` is a structured representation of the code that helps the transpiler to work with the code in a more structured way.
 
 3. **Transformation** : Babel transforms the `AST` representation of the code by converting `JSX` syntax into `React.createElement()` method calls and `ES6` syntax into `ES5` syntax. For example, it will convert `const` and `let` declarations into `var` and arrow functions into traditional functions.
 
-
 4. **Output Code** : Babel generates the output code by converting the transformed `AST` back into `JavaScript` code. The output code is then saved in a `.js` file that can be executed by the browser.
-
 
 5. **Execution** : The browser executes the output code, and the `React` library takes over the page. `ReactDOM` creates a virtual DOM and then renders the initial components.
 
-
 Now, we know about `transpiler` and the execution of `transpiler` in the context of `React` and `JSX`. **But, how do we configure `Babel` to transpile `JSX` code into `JavaScript`?**
 
-### **Babel Configuration** 
+### **Babel Configuration**
 
 There are two ways to configure `Babel`:
 
@@ -275,7 +261,7 @@ Here is an example of how to use `Babel` via CDN in the `HTML` file:
             src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
             crossorigin
     ></script>
-    <script 
+    <script
             src="https://unpkg.com/@babel/standalone/babel.min.js">
     </script>
 </head>
@@ -293,19 +279,19 @@ Here is an example of how to use `Babel` via CDN in the `HTML` file:
 </html>
 ```
 
-In the above code, we are downloading `Babel` from a CDN using the `<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>` tag. 
+In the above code, we are downloading `Babel` from a CDN using the `<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>` tag.
 
 One thing to note is that the order of the `script` tags is important. The **best practice** is to load `React` first, followed by the `ReactDOM` and `Babel` libraries.
 
-We are also using the `type="text/babel"` attribute in the `<script>` tag to tell `Babel` that the code inside the `<script>` tag is `JSX` or `ES6` code. 
+We are also using the `type="text/babel"` attribute in the `<script>` tag to tell `Babel` that the code inside the `<script>` tag is `JSX` or `ES6` code.
 
 ### **How does Browser Deal with the Above HTML?**
 
-As soon as the browser encounters the `<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>` tag, it makes an `HTTP request` to download the `Babel` library. 
+As soon as the browser encounters the `<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>` tag, it makes an `HTTP request` to download the `Babel` library.
 
 Once the script is loaded, it doesn't immediately execute the script because `babel` in the browser is **lazy**, meaning it doesn't start transpiling the `JSX` code until it encounters a `<script type="text/babel">` tag.
 
-By the time `Babel` starts transpiling `JSX`, the `React` and `ReactDOM` libraries are already loaded and available in the browser. 
+By the time `Babel` starts transpiling `JSX`, the `React` and `ReactDOM` libraries are already loaded and available in the browser.
 
 When the browser encounters the `<script type="text/babel">` tag. `Babel` recognizes that the code inside the `<script>` tag is `JSX` and it needs to be `transpiled` as we've used `type="text/babel"` attribute in the `<script>` tag. It is due to this attribute that `Babel` knows that the code inside the `<script>` tag is `JSX` or `ES6` code.
 
@@ -316,6 +302,7 @@ After `babel` has transpiled the `JSX` into the plain `JavaScript`, the browser'
 **Special Note for Babel CDN**:
 
 As we are using `Babel` via CDN in the `HTML` file, it is not recommended for production use because `JSX` is transpiled in real-time in the browser. This can slow down the loading of the page. Therefore, for optimal performance, it is recommended to use `Babel` via a build tool like `Webpack` or `Vite` in the production environment.
+
 
 The above explain also explains the working of Client Side Rendering (CSR) in React.
 
@@ -338,18 +325,18 @@ To understand this, let's take an example a simple `React` project that uses bui
   <script type="module" src="/src/index.js"></script>
 </body>
 </html>
-````
+```
 
 ```javascript
 //main.jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 const App = () => {
   return <h1>Hello, Vite!</h1>;
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 In the above code, we have a `React` component `App` that returns a `h1` element with the text `Hello, Vite!`. We are using `JSX` syntax to create the `h1` element.
@@ -360,13 +347,13 @@ Before, we proceed further let's understand what is a `build tool`?
 
 A `build tool` automates tasks involved in the development, testing, and deployment of software projects. It is used to compile, optimize code, and bundle the source code of a project into a production-ready format.
 
-When we are building a production-ready `React` application, we use a build tool like `Webpack` or `Vite` to bundle the `React` and `ReactDOM` libraries along with our JavaScript code. We also use `Babel` via the build tool to transpile the `JSX` code into `JavaScript`. 
+When we are building a production-ready `React` application, we use a build tool like `Webpack` or `Vite` to bundle the `React` and `ReactDOM` libraries along with our JavaScript code. We also use `Babel` via the build tool to transpile the `JSX` code into `JavaScript`.
 
 **Step-by-Step Process of Using Transpiler via Build Tool (Vite):**
 
-Vite is a build tool that is used to create modern web applications. It is a fast, opinionated, and pre-configured build tool that is used to build `React`, `Vue`, and `Svelte` applications. 
+Vite is a build tool that is used to create modern web applications. It is a fast, opinionated, and pre-configured build tool that is used to build `React`, `Vue`, and `Svelte` applications.
 
-Vite, by default uses `esbuild` as a bundler and transformer for `JavaScript` and `TypeScript` code. `Esbuild` is extremely fast compared to traditional transpiler like `Babel` or `Webpack`. 
+Vite, by default uses `esbuild` as a bundler and transformer for `JavaScript` and `TypeScript` code. `Esbuild` is extremely fast compared to traditional transpiler like `Babel` or `Webpack`.
 
 1. **Create a React Project** : Create a new `vite` project using `npm create vite@latest my-vite-project` command.
 
@@ -395,23 +382,22 @@ my-vite-project/
 6. **Configure `vite.config.js`**
 
 ```javascript
-
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
 export default defineConfig({
   esbuild: {
     // Enable JSX support in esbuild
-    jsxFactory: 'React.createElement',
-    jsxFragment: 'React.Fragment',
+    jsxFactory: "React.createElement",
+    jsxFragment: "React.Fragment",
 
     // Minification options
     minify: true,
 
     // Target specific JS version for older browsers
-    target: 'es2017',
+    target: "es2017",
 
     // Custom loader options (for example, transforming special syntax)
-    loader: 'jsx',
+    loader: "jsx",
 
     // Enable sourcemaps
     sourcemap: true,
@@ -423,24 +409,17 @@ export default defineConfig({
 
 `jsxFactory` : This option tells `esbuild` to use `React.createElement` as the factory function for JSX elements. This is because `React.createElement` is the function that creates the virtual DOM elements in `React`.
 
-
 `jsxFragment` : This option tells `esbuild` to use `React.Fragment` as the fragment component for JSX elements. This is because `React.Fragment` is used to wrap multiple elements in a single parent element.
-
 
 `minify` : This option tells `esbuild` to minify the output code. Minification reduces the size of the output code by removing unnecessary characters like whitespace and comments.
 
-
 `target` : This option tells `esbuild` to target a specific JavaScript version for older browsers. In this case, we are targeting `ES2017` which is compatible with most modern browsers.
-
 
 `loader` : This is useful for configuring how files are treated. For example, you can specify that `.jsx` files should be handled by the `JSX` loader.
 
-
 `sourcemap` : This option tells `esbuild` to generate sourcemaps for the output code. Sourcemaps are used to map the output code back to the original source code for debugging purposes.
 
-
 7. **Run the Vite Server** : Run the `vite` server using the `npm run dev` command. This will start the development server and open the project in the browser. When we run this code, `Vite` will compile and bundle our code using `Esbuild` and serve it on `localhost:3000`.
-
 
 8. **Build the Project** : Build the project for production using the `npm run build` command. This will create a `dist` folder that contains the production-ready code.
 
@@ -504,9 +483,9 @@ After running the build, the project in the `dist/` folder is ready to be deploy
 <link rel="stylesheet" href="/assets/style.abc123.css" />
 ```
 
-These files are requested by the browser and downloaded. Since they are optimized and minified, their file sizes are smaller, which reduces loading time. 
+These files are requested by the browser and downloaded. Since they are optimized and minified, their file sizes are smaller, which reduces loading time.
 
-3. **JavaScript Execution** : Once the `main.abc123.js` JavaScript file is downloaded, the browser executes it. This JavaScript includes everything necessary to initialize your `React` application (or other frameworks you're using), including the code for `ReactDOM.render` and all your components. 
+3. **JavaScript Execution** : Once the `main.abc123.js` JavaScript file is downloaded, the browser executes it. This JavaScript includes everything necessary to initialize your `React` application (or other frameworks you're using), including the code for `ReactDOM.render` and all your components.
 
 Now the browser do not need to download the `React` and `ReactDOM` libraries separately as they are already bundled with your code. Also, the `JSX` code is transpiled into plain `JavaScript` that the browser can understand.
 
@@ -519,5 +498,3 @@ In this article, we have covered how the browser loads the `React` and `ReactDOM
 Understanding these concepts is essential for `React` developers to build efficient and optimized applications. By knowing how the browser interacts with the `React` code, you can optimize your applications for better performance and user experience.
 
 I hope this article has helped you understand the working of `React` and how the browser interacts with `React` applications. If you have any questions or feedback, feel free to leave a comment below.
-
-
