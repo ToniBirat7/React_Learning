@@ -1,5 +1,7 @@
 const ReactX = (() => {
-  let state; // Undefined
+  let state = [];
+
+  let index = 0;
   const useState = (initialValue) => {
     if (state === undefined) {
       state = initialValue;
