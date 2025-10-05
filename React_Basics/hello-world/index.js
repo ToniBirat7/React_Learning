@@ -29,12 +29,10 @@ const Component = () => {
 
   const btn = document.getElementById("btn");
 
-  btn.addEventListener("click", () => {
-    setValue(2);
-  });
+  setValue(2);
 
   root.innerHTML = `<h1>Current Value is ${value}`;
 };
 
 Component();
-Component(); // Re-render
+Component();
