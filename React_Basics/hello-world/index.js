@@ -3,16 +3,19 @@ const ReactX = (() => {
 
   let index = 0;
   const useState = (initialValue) => {
-    if (state === undefined) {
-      state = initialValue;
+    const localIndex = index;
+    index++;
+
+    console.log(localIndex);
+
+    if (state[localIndex] === undefined) {
+      state[localIndex] = initialValue;
     }
 
-    console.log("Current Value is :", state);
-
     const setState = (updateValue) => {
-      state = updateValue;
+      state[localIndex] = updateValue;
     };
-    return [state, setState];
+    return [state[localIndex], setState];
   };
 
   return {
@@ -25,13 +28,17 @@ const { useState } = ReactX;
 const Component = () => {
   const [value, setValue] = useState(1);
 
+  const [counter, setCounter] = useState(0);
+
   console.log("Value : ", value);
+  console.log("Counter : ", counter);
 
   const root = document.getElementById("root");
 
   const btn = document.getElementById("btn");
 
   setValue(2);
+  setCounter(3);
 
   root.innerHTML = `<h1>Current Value is ${value}`;
 };
