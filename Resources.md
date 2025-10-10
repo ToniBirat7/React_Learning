@@ -1,18 +1,42 @@
 ## **React Playlist**
 
+### **React With TypeScript**
+
+[CodeEv_React_TypeScript](https://www.youtube.com/playlist?list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK)
+
 ### **Basic To Advanced**
 
 [Piyush Garg React](https://www.youtube.com/playlist?list=PLinedj3B30sBm5wu3ixPRQ0gDqHJUlxQf)
 
 [Codevolution](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
 
-### **Redux Toolkit**
+### **React `Router`**
 
-[CodeEv](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3)
+[CodeEv_React_Router](https://www.youtube.com/playlist?list=PLC3y8-rFHvwjkxt8TOteFdT_YmzwpBlrG)
+
+### **React `Hooks`**
+
+[CodeEv_React_Hooks](https://www.youtube.com/playlist?list=PLC3y8-rFHvwisvxhZ135pogtX7_Oe3Q3A)
+
+### **React `Render`**
+
+[CodeEv_React_Render](https://www.youtube.com/playlist?list=PLC3y8-rFHvwg7czgqpQIBEAHn8D6l530t)
 
 ### **React Query**
 
 [CodeEV_React_Query](https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2)
+
+### **React `Storybook`**
+
+[CodeEv_React_Storybook](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhC-j3x3t9la8-GQJGViDQk)
+
+### **Redux Toolkit**
+
+[CodeEv](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3)
+
+### **React `Formic`**
+
+[CodeEv_React_Formic](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiPmFbtzEWjESkqBVDbdgGu)
 
 ### **Hooks**
 
@@ -22,11 +46,17 @@
 
 [CodeEv_React_Material_UI](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO)
 
+### **React Table**
+
+[CodeEv_React_Table](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgWTSrDiwmUsl4ZvipOw9Cz)
+
 ### **Testing**
 
 [CodeEv_React_Testing](https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd)
 
-## **Next.js Pllaylist**
+<hr>
+
+## **Next.js Playlist**
 
 [CodeEv](http://youtube.com/playlist?list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY)
 
