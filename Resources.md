@@ -1,20 +1,40 @@
 ## **React Playlist**
 
-**Basic To Advanced**
+### **Basic To Advanced**
 
 [Piyush Garg React](https://www.youtube.com/playlist?list=PLinedj3B30sBm5wu3ixPRQ0gDqHJUlxQf)
 
 [Codevolution](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
 
-**Hooks**
+### **Redux Toolkit**
+
+[CodeEv](https://www.youtube.com/playlist?list=PLC3y8-rFHvwiaOAuTtVXittwybYIorRB3)
+
+### **React Query**
+
+[CodeEV_React_Query](https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2)
+
+### **Hooks**
 
 [React_Form_Hook](https://www.youtube.com/playlist?list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s)
+
+### **Material UI**
+
+[CodeEv_React_Material_UI](https://www.youtube.com/playlist?list=PLC3y8-rFHvwh-K9mDlrrcDywl7CeVL2rO)
+
+### **Testing**
+
+[CodeEv_React_Testing](https://www.youtube.com/playlist?list=PLC3y8-rFHvwirqe1KHFCHJ0RqNuN61SJd)
 
 ## **Next.js Pllaylist**
 
 [CodeEv](http://youtube.com/playlist?list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY)
 
 [AI_SDK_NextJs](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhZHH2BksCOYAxLmYrQL__H)
+
+## **SvelteKit Playlist**
+
+[CodeEv](https://www.youtube.com/playlist?list=PLC3y8-rFHvwjifDNQYYWI6i06D7PjF0Ua)
 
 ## **Open-Source Contributions**
 
