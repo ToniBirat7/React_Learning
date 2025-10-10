@@ -6,11 +6,19 @@
 
 [Codevolution](https://www.youtube.com/playlist?list=PLC3y8-rFHvwgg3vaYJgHGnModB54rxOk3)
 
+**Hooks**
+
+[React_Form_Hook](https://www.youtube.com/playlist?list=PLC3y8-rFHvwjmgBr1327BA5bVXoQH-w5s)
+
 ## **Next.js Pllaylist**
 
 [CodeEv](http://youtube.com/playlist?list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY)
 
 [AI_SDK_NextJs](https://www.youtube.com/playlist?list=PLC3y8-rFHvwhZHH2BksCOYAxLmYrQL__H)
+
+## **Open-Source Contributions**
+
+[Vite_Vue_Creator](https://www.youtube.com/watch?v=xH9ZKsTY73Y)
 
 ## **Animations**
 
