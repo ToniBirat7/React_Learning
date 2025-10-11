@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Form from "./Form";
 
 class ClassComponent extends Component {
   constructor(props) {
