@@ -8,7 +8,7 @@ class ClassCompB extends Component {
       name: "Birat",
     };
 
-    console.log("Lifcylce Started A");
+    console.log("Constructor A");
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -18,6 +18,20 @@ class ClassCompB extends Component {
 
   componentDidMount() {
     console.log("Mounted A");
+  }
+
+  shouldComponentUpdate() {
+    console.log("Should Update A");
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevP, prevS) {
+    console.log(`SnapShot A, Props ${prevP}, State ${prevS}`);
+    return null;
+  }
+
+  componentDidUpdate() {
+    console.log("Lifecycle A ComponentUpdate");
   }
 
   render() {

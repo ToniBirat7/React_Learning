@@ -9,24 +9,49 @@ class ClassComponent extends Component {
       name: "Birat",
     };
 
-    console.log("Lifcylce Started");
+    console.log("Constructor B");
   }
 
   static getDerivedStateFromProps(props, state) {
-    console.log("getDerived");
+    console.log("getDerived B");
     return null;
   }
 
+  clickHandler = () => {
+    this.setState({
+      name: "Birat",
+    });
+  };
+
   componentDidMount() {
-    console.log("Mounted");
+    console.log("Mounted B");
+  }
+
+  shouldComponentUpdate() {
+    console.log("Should Update B");
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevP, prevS) {
+    console.log(`SnapShot B, Props ${prevP}, State ${prevS}`);
+    return null;
+  }
+
+  componentDidUpdate() {
+    console.log("Lifecycle B ComponentUpdate");
+  }
+
+  componentWillUnmount() {
+    console.log("Unmounted B");
   }
 
   render() {
-    console.log("Render");
+    console.log("Render B");
     return (
       <>
         <h1>Hiii Lifecycle B</h1>
         <ClassCompB></ClassCompB>
+        <button onClick={this.clickHandler}>Click Me</button>
       </>
     );
   }
