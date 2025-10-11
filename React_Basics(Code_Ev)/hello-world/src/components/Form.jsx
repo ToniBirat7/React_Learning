@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Form = () => {
   const [name, setName] = useState("Birat");
@@ -13,7 +13,7 @@ const Form = () => {
     console.log(data);
   };
 
-  console.log(name, age);
+  // console.log(name, age);
 
   return (
     <form className="container" onSubmit={handleSubmit}>
