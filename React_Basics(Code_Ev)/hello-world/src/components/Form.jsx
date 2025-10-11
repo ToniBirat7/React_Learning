@@ -1,12 +1,18 @@
 import { useState } from "react";
 
 const Form = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(null);
+  const [name, setName] = useState("Birat");
+  const [age, setAge] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  console.log(name, age);
 
   return (
     <form className="container">
-      <div className>
+      <div>
         <label htmlFor="name">Full Name:</label>
         <input
           type="text"
@@ -20,7 +26,7 @@ const Form = () => {
         ></input>
       </div>
 
-      <div className="">
+      <div>
         <label htmlFor="age">Age:</label>
         <input
           type="number"
@@ -32,6 +38,7 @@ const Form = () => {
           }}
         ></input>
       </div>
+      <button type="submit"></button>
     </form>
   );
 };
