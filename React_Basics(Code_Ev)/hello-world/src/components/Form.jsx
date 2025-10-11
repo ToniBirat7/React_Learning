@@ -6,12 +6,17 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    data = {
+      name: name,
+      age: age,
+    };
+    console.log(data);
   };
 
   console.log(name, age);
 
   return (
-    <form className="container">
+    <form className="container" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Full Name:</label>
         <input
@@ -38,7 +43,7 @@ const Form = () => {
           }}
         ></input>
       </div>
-      <button type="submit"></button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
