@@ -6,9 +6,9 @@ function App({ isLoggedIn, username }) {
   };
   console.log(isLoggedIn, username);
   return (
-    <div>
-      isLoggedIn ? <h1>Hi ${username}</h1> : <Form></Form>
-    </div>
+    <>
+      {isLoggedIn ? <h1>Hi ${username}</h1> : <Form></Form>}
+    </>
   );
 }
 
