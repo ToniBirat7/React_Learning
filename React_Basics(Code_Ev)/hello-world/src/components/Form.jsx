@@ -4,6 +4,16 @@ const Form = () => {
   const [name, setName] = useState("Birat");
   const [age, setAge] = useState("");
 
+  let [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log(`I rendered ${count} times`);
+    setCount(count + 1);
+    return (e) => {
+      console.log("I am Clean Up", e);
+    };
+  }, [name]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = {
@@ -13,7 +23,7 @@ const Form = () => {
     console.log(data);
   };
 
-  // console.log(name, age);
+  console.log(name, age);
 
   return (
     <form className="container" onSubmit={handleSubmit}>
