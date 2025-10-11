@@ -6,7 +6,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    data = {
+    const data = {
       name: name,
       age: age,
     };
