@@ -16,7 +16,9 @@ class ClassComponent extends Component {
     return null;
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log("Mounted");
+  }
 
   render() {
     console.log("Render");
