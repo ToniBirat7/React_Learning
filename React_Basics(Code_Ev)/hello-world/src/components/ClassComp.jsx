@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Form from "./Form";
+import ClassCompB from "./ClassCompB";
 
 class ClassComponent extends Component {
   constructor(props) {
@@ -23,7 +23,12 @@ class ClassComponent extends Component {
 
   render() {
     console.log("Render");
-    return <h1>Hiii Lifecycle</h1>;
+    return (
+      <>
+        <h1>Hiii Lifecycle B</h1>
+        <ClassCompB></ClassCompB>
+      </>
+    );
   }
 }
 
