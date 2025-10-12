@@ -1,14 +1,14 @@
-import { Consumer } from "./userContext";
+import { UserContext } from "./userContext";
+import { use, useContext } from "react";
 
 const Sib1 = (props) => {
   console.log("Sib1", props);
+  const user = useContext(UserContext);
+
+  console.log("User : ", user);
   return (
     <>
-      <Consumer>
-        {(value) => {
-          return <h1>Sibling 2, Value : {value}</h1>;
-        }}
-      </Consumer>
+      <h1>Sib 1 User: {user}</h1>
     </>
   );
 };

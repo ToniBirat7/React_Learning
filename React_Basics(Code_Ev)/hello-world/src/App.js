@@ -3,11 +3,10 @@ import { ErrorBoundary } from "react-error-boundary";
 import BuggyComponent from "./components/BuggyComp";
 import ErrorFallback from "./components/ErrorBoundary";
 import Parent from "./components/context/Parent";
-import { Provider } from "./components/context/userContext";
+// import { Provider } from "./components/context/userContext";
+import { UserContext } from "./components/context/userContext";
 
 function App({ isLoggedIn, username }) {
-  // console.log(`Provider : ${Provider}, Consumer : ${Consumer}`);
-  console.log(Provider);
   return (
     <>
       {/* <ErrorBoundary
@@ -19,9 +18,13 @@ function App({ isLoggedIn, username }) {
         <BuggyComponent></BuggyComponent>
       </ErrorBoundary> */}
       {/* Context Value Providing */}
-      <Provider value="Birat">
+      {/* <Provider value="Birat" username="Karki">
         <Parent></Parent>
-      </Provider>
+      </Provider> */}
+
+      <UserContext.Provider value="Birat" uname="Karki">
+        <Parent></Parent>
+      </UserContext.Provider>
     </>
   );
 }
