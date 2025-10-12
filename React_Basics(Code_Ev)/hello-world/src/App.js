@@ -5,8 +5,11 @@ import ErrorFallback from "./components/ErrorBoundary";
 import Parent from "./components/context/Parent";
 // import { Provider } from "./components/context/userContext";
 import { UserContext } from "./components/context/userContext";
+import { useState } from "react";
 
 function App({ isLoggedIn, username }) {
+  const [theme, setTheme] = useState("light");
+  const [uname, setUname] = useState("Kese");
   return (
     <>
       {/* <ErrorBoundary
@@ -22,7 +25,7 @@ function App({ isLoggedIn, username }) {
         <Parent></Parent>
       </Provider> */}
 
-      <UserContext.Provider value="Birat" uname="Karki">
+      <UserContext.Provider value={{ name: "Birat", age: 24 }}>
         <Parent></Parent>
       </UserContext.Provider>
     </>
