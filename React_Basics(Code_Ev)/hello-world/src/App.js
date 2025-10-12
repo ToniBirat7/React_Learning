@@ -1,6 +1,4 @@
 import "./App.css";
-import Form from "./components/Form";
-import ClassComponent from "./components/ClassComp";
 import { ErrorBoundary } from "react-error-boundary";
 import BuggyComponent from "./components/BuggyComp";
 import ErrorFallback from "./components/ErrorBoundary";
