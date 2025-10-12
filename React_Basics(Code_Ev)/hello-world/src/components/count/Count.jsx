@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const Count = () => {
   const [items, setItems] = useState([]);
   const btnRef = useRef(null);
+  const [display, setDisplay] = useState(true);
 
   console.log(btnRef);
 
@@ -21,10 +22,14 @@ const Count = () => {
     return () => {
       // el.removeEventListener("mouseenter", () => console.log("Removed it"));
       console.log("Removed it");
+      el.removeEventListener("mouseenter", () => {
+        console.log("Event Removed");
+      });
     };
   }, [items]);
 
   const addItem = () => {
+    setDisplay(false);
     const newItem = {
       // id: items.length, // fine for append-only lists, but see notes below
       id: Date.now(), // better unique id for simple demo
@@ -37,9 +42,11 @@ const Count = () => {
 
   return (
     <div>
-      <button onClick={addItem} ref={btnRef}>
-        Add an Item
-      </button>
+      {display && (
+        <button onClick={addItem} ref={btnRef}>
+          Add an Item
+        </button>
+      )}
 
       <ul>
         {items.map((it) => (
