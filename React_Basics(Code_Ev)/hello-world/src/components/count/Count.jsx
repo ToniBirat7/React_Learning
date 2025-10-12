@@ -14,16 +14,15 @@ const Count = () => {
 
     if (!el) return;
 
-    console.log("Not Returned");
-
     el.addEventListener("mouseenter", (e) => {
       console.log(e.type);
     });
 
     return () => {
-      el.removeEventListener("mouseenter", () => console.log("Removed it"));
+      // el.removeEventListener("mouseenter", () => console.log("Removed it"));
+      console.log("Removed it");
     };
-  });
+  }, [items]);
 
   const addItem = () => {
     const newItem = {
