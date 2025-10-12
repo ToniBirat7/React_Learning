@@ -6,12 +6,11 @@ import Parent from "./components/context/Parent";
 import { Provider, Consumer } from "./components/context/userContext";
 
 function App({ isLoggedIn, username }) {
-  console.log(`Provider : ${provider}, Consumer : ${consumer}`);
+  // console.log(`Provider : ${Provider}, Consumer : ${Consumer}`);
+  console.log(Provider);
+  console.log(Consumer);
   return (
     <>
-      {/* {isLoggedIn ? <h1>Hi ${username}</h1> : <Form></Form>} */}
-      {/* <ClassComponent></ClassComponent> */}
-
       {/* <ErrorBoundary
         FallbackComponent={ErrorFallback}
         onReset={() => {
@@ -20,8 +19,10 @@ function App({ isLoggedIn, username }) {
       >
         <BuggyComponent></BuggyComponent>
       </ErrorBoundary> */}
-      <Provider></Provider>
-      <Parent name="Passed from App"></Parent>
+
+      <Provider value="Birat">
+        <Parent></Parent>
+      </Provider>
     </>
   );
 }
