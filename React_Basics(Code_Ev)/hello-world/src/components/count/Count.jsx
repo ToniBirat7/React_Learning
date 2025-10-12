@@ -1,7 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Count = () => {
   const [items, setItems] = useState([]);
+  const btnRef = useRef(null);
+
+  console.log(btnRef);
+
+  useEffect(() => {
+    console.log("This Is Effect", items);
+    const el = btnRef.current;
+
+    console.log(el);
+
+    if (!el) return;
+
+    console.log("Not Returned");
+
+    el.addEventListener("mouseenter", (e) => {
+      console.log(e.type);
+    });
+
+    return () => {
+      console.log("Unmounting");
+    };
+  }, []);
 
   const addItem = () => {
     const newItem = {
@@ -14,11 +36,11 @@ const Count = () => {
     setItems((prev) => [...prev, newItem]);
   };
 
-  console.log(items);
-
   return (
     <div>
-      <button onClick={addItem}>Add an Item</button>
+      <button onClick={addItem} ref={btnRef}>
+        Add an Item
+      </button>
 
       <ul>
         {items.map((it) => (
