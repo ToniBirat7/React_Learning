@@ -6,6 +6,7 @@ import Parent from "./components/context/Parent";
 // import { Provider } from "./components/context/userContext";
 import { UserContext } from "./components/context/userContext";
 import { useState } from "react";
+import Count from "./components/count/Count";
 
 function App({ isLoggedIn, username }) {
   const [theme, setTheme] = useState("light");
@@ -25,9 +26,11 @@ function App({ isLoggedIn, username }) {
         <Parent></Parent>
       </Provider> */}
 
-      <UserContext.Provider value={{ name: "Birat", age: 24 }}>
+      {/* <UserContext.Provider value={{ name: "Birat", age: 24 }}>
         <Parent></Parent>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+
+      <Count></Count>
     </>
   );
 }
