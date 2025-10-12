@@ -3,12 +3,12 @@ import { useContext } from "react";
 
 const Sib1 = (props) => {
   console.log("Sib1", props);
-  const { theme, uname } = useContext(UserContext);
+  const { name, age } = useContext(UserContext);
 
-  console.log(`Theme ${theme}, UName ${uname}`);
+  console.log(`Theme ${name}, UName ${age}`);
   return (
     <>
-      <h1>Sib 1 User: {uname}</h1>
+      <h1>Sib 1 User: {name}</h1>
     </>
   );
 };
