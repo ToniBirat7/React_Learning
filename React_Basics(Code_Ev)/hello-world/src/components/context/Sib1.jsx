@@ -1,10 +1,14 @@
-import React from "react";
+import { Consumer } from "./userContext";
 
 const Sib1 = (props) => {
   console.log("Sib1", props);
   return (
     <>
-      <h1>Sib1</h1>
+      <Consumer>
+        {(value) => {
+          return <h1>Sibling 2, Value : {value}</h1>;
+        }}
+      </Consumer>
     </>
   );
 };
