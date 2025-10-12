@@ -4,8 +4,15 @@ const Count = () => {
   const [items, setItems] = useState([]);
   const btnRef = useRef(null);
   const [display, setDisplay] = useState(true);
+  const [count, setCount] = useState(0);
 
   console.log(btnRef);
+
+  const tick = () => {
+    setCount((prev) => {
+      return prev + 1;
+    });
+  };
 
   useEffect(() => {
     console.log("This Is Effect", items);
@@ -19,12 +26,14 @@ const Count = () => {
       console.log(e.type);
     });
 
+    const interval = setInterval(tick, 1000);
+
     return () => {
-      // el.removeEventListener("mouseenter", () => console.log("Removed it"));
       console.log("Removed it");
       el.removeEventListener("mouseenter", () => {
         console.log("Event Removed");
       });
+      clearInterval(interval);
     };
   }, [items]);
 
@@ -47,6 +56,8 @@ const Count = () => {
           Add an Item
         </button>
       )}
+
+      <h1>{count}</h1>
 
       <ul>
         {items.map((it) => (
