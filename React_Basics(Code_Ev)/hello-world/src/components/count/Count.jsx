@@ -21,9 +21,9 @@ const Count = () => {
     });
 
     return () => {
-      console.log("Unmounting");
+      el.removeEventListener("mouseenter", () => console.log("Removed it"));
     };
-  }, []);
+  });
 
   const addItem = () => {
     const newItem = {
