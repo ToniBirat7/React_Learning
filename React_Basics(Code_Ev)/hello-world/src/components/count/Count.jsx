@@ -1,38 +1,31 @@
 import React, { useState } from "react";
 
 const Count = () => {
-  const [count, setCount] = useState({ fname: "", lname: "" });
+  const [items, setItems] = useState([]);
+
+  const addItem = () => {
+    const newItem = {
+      // id: items.length, // fine for append-only lists, but see notes below
+      id: Date.now(), // better unique id for simple demo
+      value: Math.floor(Math.random() * 10) + 1, // 1..10
+    };
+
+    // use functional update to avoid stale closure if many updates happen quickly
+    setItems((prev) => [...prev, newItem]);
+  };
+
+  console.log(items);
 
   return (
-    <>
-      Count: {count}
-      <button
-        onClick={() => {
-          setCount((prev) => {
-            console.log(prev);
-            return prev + 1;
-          });
-        }}
-      >
-        Increament
-      </button>
-      <button
-        onClick={() => {
-          setCount((prev) => {
-            return prev - 1;
-          });
-        }}
-      >
-        Decrement
-      </button>
-      <button
-        onClick={() => {
-          setCount(0);
-        }}
-      >
-        Reset
-      </button>
-    </>
+    <div>
+      <button onClick={addItem}>Add an Item</button>
+
+      <ul>
+        {items.map((it) => (
+          <li key={it.id}>{it.value}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
