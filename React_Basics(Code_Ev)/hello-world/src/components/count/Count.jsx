@@ -6,7 +6,7 @@ const Count = () => {
   const [display, setDisplay] = useState(true);
   const [count, setCount] = useState(0);
 
-  console.log(btnRef);
+  console.log("Ref", btnRef);
 
   const tick = () => {
     setCount((prev) => {
@@ -35,7 +35,7 @@ const Count = () => {
       });
       clearInterval(interval);
     };
-  }, [items]);
+  }, []);
 
   const addItem = () => {
     setDisplay(false);
