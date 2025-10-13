@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import Sib2 from "./Sib2";
+import { CounterContext } from "./userContext";
 
 const Parent = (props) => {
-  console.log("Parent", props);
+  const counterContext = useContext(CounterContext);
+  console.log("Context", counterContext);
   return (
     <>
-      <h1>Parent</h1>
+      <button onClick={() => {}}></button>
       <Sib2 name={props}></Sib2>
     </>
   );
