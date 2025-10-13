@@ -7,6 +7,7 @@ import Parent from "./components/context/Parent";
 import { UserContext } from "./components/context/userContext";
 import { useState } from "react";
 import Count from "./components/count/Count";
+import Reducer from "./components/reducer/Reducer";
 
 function App({ isLoggedIn, username }) {
   const [theme, setTheme] = useState("light");
@@ -30,7 +31,8 @@ function App({ isLoggedIn, username }) {
         <Parent></Parent>
       </UserContext.Provider> */}
 
-      <Count></Count>
+      {/* <Count></Count> */}
+      <Reducer></Reducer>
     </>
   );
 }
