@@ -10,6 +10,9 @@ import Count from "./components/count/Count";
 import Reducer from "./components/reducer/Reducer";
 
 const reducer = (state, action) => {
+  console.log("I am Reducer");
+  console.log("Action", action);
+  console.log("State", state);
   switch (action.type) {
     case "inc":
       return state + 1;

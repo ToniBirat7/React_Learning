@@ -1,14 +1,20 @@
-import { UserContext } from "./userContext";
 import { useContext } from "react";
-
-const Sib1 = (props) => {
-  console.log("Sib1", props);
-  const { name, age } = useContext(UserContext);
-
-  console.log(`Theme ${name}, UName ${age}`);
+import { CounterContext } from "./userContext";
+const Sib1 = () => {
+  const counterContext = useContext(CounterContext);
   return (
     <>
-      <h1>Sib 1 User: {name}</h1>
+      <h1>Inner First Count : {counterContext.state} </h1>
+      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
+        Increament
+      </button>
+      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
+        Decrement
+      </button>
+      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
+        Reset
+      </button>
+      <br></br>
     </>
   );
 };
