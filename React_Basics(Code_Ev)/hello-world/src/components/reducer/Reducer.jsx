@@ -19,9 +19,9 @@ const Reducer = () => {
   return (
     <>
       <h1>Count : {count}</h1>
-      <button onClick={() => dispatch("increment")}></button>
-      <button onClick={() => dispatch("decrement")}></button>
-      <button onClick={() => dispatch("reset")}></button>
+      <button onClick={() => dispatch("increment")}>Increament</button>
+      <button onClick={() => dispatch("decrement")}>Decrement</button>
+      <button onClick={() => dispatch("reset")}>Reset</button>
     </>
   );
 };
