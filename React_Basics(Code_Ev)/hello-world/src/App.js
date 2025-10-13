@@ -15,6 +15,7 @@ const reducer = (state, action) => {
   console.log("State", state);
   switch (action.type) {
     case "inc":
+      console.log("Inc");
       return state + 1;
     case "dec":
       return state - 1;
@@ -28,7 +29,7 @@ const reducer = (state, action) => {
 function App({ isLoggedIn, username }) {
   const [theme, setTheme] = useState("light");
   const [uname, setUname] = useState("Kese");
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [state, dispatch] = useReducer(reducer, 0);
   return (
     <>
@@ -40,18 +41,8 @@ function App({ isLoggedIn, username }) {
       >
         <BuggyComponent></BuggyComponent>
       </ErrorBoundary> */}
-      {/* Context Value Providing */}
-      {/* <Provider value="Birat" username="Karki">
-        <Parent></Parent>
-      </Provider> */}
 
-      {/* <UserContext.Provider value={{ name: "Birat", age: 24 }}>
-        <Parent></Parent>
-      </UserContext.Provider> */}
-
-      {/* <Count></Count> */}
-      {/* <Reducer></Reducer> */}
-      <CounterContext.Provider value={{ state: count, dispatch: dispatch }}>
+      <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
         <Parent></Parent>
       </CounterContext.Provider>
     </>

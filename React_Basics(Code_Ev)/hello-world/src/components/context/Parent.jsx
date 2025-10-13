@@ -11,10 +11,10 @@ const Parent = () => {
       <button onClick={() => counterContext.dispatch({ type: "inc" })}>
         Increament
       </button>
-      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
+      <button onClick={() => counterContext.dispatch({ type: "dec" })}>
         Decrement
       </button>
-      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
+      <button onClick={() => counterContext.dispatch({ type: "reset" })}>
         Reset
       </button>
       <br></br>
