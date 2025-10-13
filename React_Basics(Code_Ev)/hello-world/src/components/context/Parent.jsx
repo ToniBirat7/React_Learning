@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Sib2 from "./Sib2";
 import { CounterContext } from "./userContext";
+import Btn from "./Btn";
 
 const Parent = () => {
   const counterContext = useContext(CounterContext);
@@ -8,15 +9,7 @@ const Parent = () => {
   return (
     <>
       <h1>Parent Count : {counterContext.state}</h1>
-      <button onClick={() => counterContext.dispatch({ type: "inc" })}>
-        Increament
-      </button>
-      <button onClick={() => counterContext.dispatch({ type: "dec" })}>
-        Decrement
-      </button>
-      <button onClick={() => counterContext.dispatch({ type: "reset" })}>
-        Reset
-      </button>
+      <Btn dispatch={counterContext.dispatch}></Btn>
       <br></br>
       <Sib2></Sib2>
     </>
