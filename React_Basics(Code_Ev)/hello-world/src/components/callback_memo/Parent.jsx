@@ -1,17 +1,18 @@
 import Count from "./Count";
 import Button from "./Button";
 import Title from "./Title";
+import { useState } from "react";
 const Parent = () => {
-  const [age, setAge] = useState("");
+  const [age, setAge] = useState(0);
   const [salary, setSalary] = useState(50000);
 
-  incrementAge = () => {
+  const incrementAge = () => {
     setAge((prev) => {
       return prev + 1;
     });
   };
 
-  incrementSal = () => {
+  const incrementSal = () => {
     setSalary((prev) => {
       return prev + 1000;
     });

@@ -1,6 +1,7 @@
-import Parent from "./components/context/Parent";
+// import Parent from "./components/context/Parent";
 import { CounterContext } from "./components/context/userContext";
 import { useReducer, useState } from "react";
+import Parent from "./components/callback_memo/Parent";
 
 const reducer = (state, action) => {
   console.log("I am Reducer");
@@ -23,9 +24,10 @@ function App() {
   const [state, dispatch] = useReducer(reducer, 0);
   return (
     <>
-      <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
+      {/* <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
         <Parent></Parent>
-      </CounterContext.Provider>
+      </CounterContext.Provider> */}
+      <Parent></Parent>
     </>
   );
 }

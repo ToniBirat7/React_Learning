@@ -1,3 +1,4 @@
+import React from "react";
 const Title = () => {
   console.log("Rendering Title");
   return (
@@ -7,4 +8,4 @@ const Title = () => {
   );
 };
 
-export default Title;
+export default React.memo(Title);
