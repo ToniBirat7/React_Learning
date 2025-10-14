@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const useCounter = (state) => {
   const [count, setCount] = useState(state);
@@ -17,6 +17,13 @@ const useCounter = (state) => {
 
   const reset = () => {
     setCount(0);
+  };
+
+  return {
+    count,
+    increment,
+    decrement,
+    reset,
   };
 };
 
