@@ -1,24 +1,37 @@
 import Count from "./Count";
 import Button from "./Button";
 import Title from "./Title";
-import { useCallback, useState } from "react";
+import { useMemo, useState } from "react";
 const Parent = () => {
-  const [age, setAge] = useState(0);
+  const [count, setcount] = useState(0);
+  const [count2, setcount2] = useState(0);
 
-  const incrementAge = useCallback(() => {
+  const isEven = useMemo(() => {
     let i = 0;
     while (i < 2000000000) i++;
-    setAge((prev) => {
+    return count % 2 === 0;
+  }, [count]);
+
+  const incrementTwo = () => {
+    setcount2((prev) => {
       return prev + 1;
     });
-  }, [age]);
+  };
+
+  const incrementOne = () => {
+    setcount((prev) => {
+      return prev + 1;
+    });
+  };
 
   return (
     <>
       <div>
         <Title></Title>
-        <Count text="Age" count={age}></Count>
-        <Button handleClick={incrementAge}>Increment Age</Button>
+        <Count text="count" count={count}></Count>
+        <span>{isEven ? "Even" : "Odd"}</span>
+        <Button handleClick={incrementOne}>Increment Count 1</Button>
+        <Button handleClick={incrementTwo}>Increment Count 2 : {count2}</Button>
       </div>
     </>
   );
