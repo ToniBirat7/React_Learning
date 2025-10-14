@@ -1,34 +1,25 @@
-// import Parent from "./components/context/Parent";
-import { CounterContext } from "./components/context/userContext";
-import { useReducer, useState } from "react";
-import Parent from "./components/callback_memo/Parent";
+import { useEffect, useState } from "react";
 import HookTimer from "./components/useRef/HookTimer";
-
-const reducer = (state, action) => {
-  console.log("I am Reducer");
-  console.log("Action", action);
-  console.log("State", state);
-  switch (action.type) {
-    case "inc":
-      console.log("Inc");
-      return state + 1;
-    case "dec":
-      return state - 1;
-    case "reset":
-      return 0;
-    default:
-      return state;
-  }
-};
+import useDocumentTitle from "./hooks/useDocumentTitle";
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, 0);
+  const [count, setCount] = useState(0);
+  useEffect(count);
   return (
     <>
       {/* <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
         <Parent></Parent>
       </CounterContext.Provider> */}
       {/* <Parent></Parent> */}
+      <button
+        onClick={() => {
+          setCount((prev) => {
+            return prev + 1;
+          });
+        }}
+      >
+        Click me to Increment
+      </button>
       <HookTimer></HookTimer>
     </>
   );
