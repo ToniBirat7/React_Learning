@@ -4,27 +4,21 @@ import Title from "./Title";
 import { useCallback, useState } from "react";
 const Parent = () => {
   const [age, setAge] = useState(0);
-  const [salary, setSalary] = useState(50000);
 
   const incrementAge = useCallback(() => {
+    let i = 0;
+    while (i < 2000000000) i++;
     setAge((prev) => {
       return prev + 1;
     });
   }, [age]);
 
-  const incrementSal = useCallback(() => {
-    setSalary((prev) => {
-      return prev + 1000;
-    });
-  }, [salary]);
   return (
     <>
       <div>
         <Title></Title>
         <Count text="Age" count={age}></Count>
         <Button handleClick={incrementAge}>Increment Age</Button>
-        <Count text="Salary" count={salary}></Count>
-        <Button handleClick={incrementSal}>Increment Salary</Button>
       </div>
     </>
   );
