@@ -4,16 +4,16 @@ import Counter1 from "./Counter1";
 import Counter2 from "./Counter2";
 
 const MainCounter = () => {
-  const [count, increment, decrement, reset] = useCounter(0);
+  const { count, increment, decrement, reset } = useCounter(0);
   return (
     <>
       <div>
         <h1>Parent Count : {count}</h1>
-        <button>Increment</button>
-        <button>Increment</button>
-        <button>Increment</button>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
       </div>
-      <counter1></counter1>
+      <Counter1></Counter1>
       <Counter2></Counter2>
     </>
   );

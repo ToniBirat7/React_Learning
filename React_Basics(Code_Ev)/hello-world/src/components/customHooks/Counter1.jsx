@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import useCounter from "../../hooks/useCounter";
 
 const Counter1 = () => {
-  return (
-    <div>Counter1</div>
-  )
-}
+  const { count, increment, decrement, reset } = useCounter(0);
 
-export default Counter1
+  return (
+    <>
+      <div>
+        <h1>Counter1 Count : {count}</h1>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
+      </div>
+    </>
+  );
+};
+
+export default Counter1;
