@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import HookTimer from "./components/useRef/HookTimer";
+import { useState } from "react";
 import useDocumentTitle from "./hooks/useDocumentTitle";
 
 function App() {
   const [count, setCount] = useState(0);
-  useEffect(count);
+  useDocumentTitle(count);
   return (
     <>
       {/* <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
@@ -20,7 +19,7 @@ function App() {
       >
         Click me to Increment
       </button>
-      <HookTimer></HookTimer>
+      {/* <HookTimer></HookTimer> */}
     </>
   );
 }
