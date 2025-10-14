@@ -2,6 +2,7 @@
 import { CounterContext } from "./components/context/userContext";
 import { useReducer, useState } from "react";
 import Parent from "./components/callback_memo/Parent";
+import HookTimer from "./components/useRef/HookTimer";
 
 const reducer = (state, action) => {
   console.log("I am Reducer");
@@ -27,7 +28,8 @@ function App() {
       {/* <CounterContext.Provider value={{ state: state, dispatch: dispatch }}>
         <Parent></Parent>
       </CounterContext.Provider> */}
-      <Parent></Parent>
+      {/* <Parent></Parent> */}
+      <HookTimer></HookTimer>
     </>
   );
 }

@@ -1,11 +1,24 @@
-import React, { useReducer, useRef, useState } from "react";
+import React, { useEffect, useReducer, useRef, useState } from "react";
 
 const HookTimer = () => {
   const [timer, setTimer] = useState(0);
-  const intervalRed = useRef(null);
+  const intervalRef = useRef(null);
+
+  useEffect(() => {
+    setInterval(() => {
+      setTimer((prev) => {
+        return prev + 1;
+      });
+    });
+
+    return () => {
+      clearInterval(intervalRef.current);
+    };
+  }, []);
   return (
     <>
-      <div className=""></div>
+      <h1>Hook Timer : {timer}</h1>
+      <button>Clear Timer</button>
     </>
   );
 };
