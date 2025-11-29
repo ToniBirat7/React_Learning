@@ -1,9 +1,11 @@
 import MainCounter from "./components/customHooks/MainCounter";
+import Portal from "./components/portal/Portal";
 
 function App() {
   return (
     <>
-      <MainCounter></MainCounter>
+      <Portal></Portal>
+      {/* <MainCounter></MainCounter> */}
     </>
   );
 }
