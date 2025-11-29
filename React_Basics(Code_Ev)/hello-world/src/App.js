@@ -1,10 +1,10 @@
 import MainCounter from "./components/customHooks/MainCounter";
-import Portal from "./components/portal/Modal";
+import Modal from "./components/portal/Modal";
 
 function App() {
   return (
     <>
-      <Portal></Portal>
+      <Modal></Modal>
       {/* <MainCounter></MainCounter> */}
     </>
   );
