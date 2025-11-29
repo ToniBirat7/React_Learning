@@ -11,7 +11,7 @@ const usePortal = () => {
     return () => document.body.removeChild(el);
   }, []);
 
-  ref.current;
+  return ref.current;
 };
 
 export default usePortal;

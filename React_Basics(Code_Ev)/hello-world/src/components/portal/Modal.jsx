@@ -3,6 +3,7 @@ import usePortal from "../../hooks/usePortal";
 
 const Modal = () => {
   const container = usePortal();
+  console.log(container);
 
   return createPortal(<h1>This is another DOM</h1>, container);
 };
