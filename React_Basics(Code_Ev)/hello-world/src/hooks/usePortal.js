@@ -10,6 +10,8 @@ const usePortal = () => {
     document.body.appendChild(el);
     return () => document.body.removeChild(el);
   }, []);
+
+  ref.current;
 };
 
 export default usePortal;

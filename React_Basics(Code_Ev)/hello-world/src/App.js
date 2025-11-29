@@ -1,5 +1,5 @@
 import MainCounter from "./components/customHooks/MainCounter";
-import Portal from "./components/portal/Portal";
+import Portal from "./components/portal/Modal";
 
 function App() {
   return (
