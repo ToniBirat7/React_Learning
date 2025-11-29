@@ -1,19 +1,14 @@
 import { useContext } from "react";
-import Sib2 from "./Sib2";
-import { CounterContext } from "./userContext";
-import Btn from "./Btn";
+import { UserContext } from "./userContext";
 
-const Parent = () => {
-  const counterContext = useContext(CounterContext);
+const ContextParent = () => {
+  const counterContext = useContext(UserContext);
   console.log("Context", counterContext);
   return (
     <>
-      <h1>Parent Count : {counterContext.state}</h1>
-      <Btn dispatch={counterContext.dispatch}></Btn>
-      <br></br>
-      <Sib2></Sib2>
+      <h1>Parent Count : {counterContext}</h1>
     </>
   );
 };
 
-export default Parent;
+export default ContextParent;
